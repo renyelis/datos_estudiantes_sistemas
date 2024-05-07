@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Colegio San Jose de Guanenta</h1>
+    <h1>Especialidad en Sistemas - 2024</h1>
+    <h1>Datos del estudiante</h1>
+    <form id="myForm">
+        <label for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" name="Apellido" required>
+
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+    </form>
+
+    <form id="myForm">
+        <label for="Fecha de nacimiento ">Fecha de nacimiento:</label>
+        <input type="text" id="Fecha de nacimiento" name="Fecha de nacimiento" required>
+
+        <label for="Lugar de nacimiento">Lugar de nacimiento:</label>
+        <input type="text" id="Lugar de nacimiento" name="Lugar de nacimiento" required>
+
+        <label for="Edad">Edad:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+    </form>
+
+    <form action="">
+        <label for="Tipo Documento Identidad">Tipo Documento Identidad: </label>
+        <input type="radio" value="T.I" name="opcion" id="opcion_ T.I"/> T.I
+        <input type="radio" value="C.C" name="opcion" id="opcion_C.C"/> C.C
+        <label for="Número Documento Identidad: ">Número Documento Identidad:</label>
+        <input type="text" id="Documento Identidad" name="Documento Identidad" required>
+    </form>
+
+        <form id="myForm">
+            <label for="Lugar Expedición Documento Identidad:  ">Lugar Expedición Documento Identidad: </label>
+            <input type="text" id="Lugar Expedición Documento Identidad: " name="Lugar Expedición Documento Identidad: " required>
+    
+        </form>
+
+        <form id="myForm">
+            <label for="Direccion">Direccion:</label>
+            <input type="text" id="Direccion" name="Direccion" required>
+    
+            <label for="Barrio">Barrio:</label>
+            <input type="text" id="Barrio" name="Barrio" required>
+    
+            <label for="Ciudad">Edad:</label>
+            <input type="text" id="Ciudad" name="Ciudad" required>
+    
+        </form>
+
+        <form id="myForm">
+            <label for="Telefono">Telefono:</label>
+            <input type="text" id="Telefono" name="Telefono" required>
+        
+            <label for="Celular">Celular:</label>
+            <input type="text" id="Celular" name="Celular" required>
+        
+        </form>
+
+        <form id="myForm">
+            <label for="E-mail personal:">E-mail personal:</label>
+            <input type="text" id="E-mail personal" name="E-mail personal" required>
+    
+            <label for="E-mail inst:">E-mail inst:</label>
+            <input type="text" id="E-mail inst:" name="E-mail inst:" required>
+    
+        </form>
+
+
+        <form id="myForm">
+            <label for="Tipo de sangre">Tipo de sangre:</label>
+            <input type="text" id="Tipo de sangre" name="Tipo de sangre" required>
+        
+            <label for="EPS">EPS:</label>
+            <input type="text" id="EPS" name="EPS" required>
+        
+        </form>
+
+        <form action="">
+            <label for="¿Sufre alguna enfermendad?">¿Sufre alguna enfermendad? </label>
+            <input type="radio" value="si" name="pregunta" id="pregunta_ si"/> SI
+            <input type="radio" value="no" name="pregunta" id="pregunta_ no"/> NO
+
+            <label for="Cuál?">Cuál?:</label>
+            <input type="text" id="Cuál?" name="Cuál?" required>
+        
+        </form>
+
+
+        <form action="">
+
+            <label for="Estrato socioeconómico">Estrato socioeconómico: </label>
+            <input type="text" id="Estrato" name="Estrato" required>
+
+            <label for="Familias en Acción:">Familias en Acción: </label>
+            <input type="radio" value="si" name="pregunta" id="pregunta_ si"/> SI
+            <input type="radio" value="no" name="pregunta" id="pregunta_ no"/> NO
+
+        </form>
+
+
+        <form id="myForm">
+            <label for="Tipo de religion">Tipo de religion:</label>
+            <input type="text" id="Tipo de religion" name="Tipo de religion" required>
+        
+            
+        </form>   
+
+        <form action="">
+            <label for="Relación Padres:">Relación Padres: </label>
+            <input type="radio" value="si" name="pregunta" id="pregunta_ si"/>Casados
+            <input type="radio" value="no" name="pregunta" id="pregunta_ no"/> Divorciados
+            <input type="radio" value="no" name="pregunta" id="pregunta_ no"/> Unión Libre
+        
+
+            <label for="Cuál?">Cuál?:</label>
+            <input type="text" id="Cuál?" name="Cuál?" required>
+        
+        </form>
+
+
+
+    <script>
+        const form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+            // Validar los campos del formulario
+            const Apellido = document.getElementById('apellido').value;
+            const nombre = document.getElementById('nombre').value;
+
+
+            if (nombre === '' || apellido === '' ) {
+                alert('Por favor, complete todos los campos del formulario.');
+                return;
+            }
+
+            // Aquí puedes realizar otras acciones con los datos del formulario, como enviarlos a un servidor
+
+            // Limpiar el formulario después de enviarlo
+            form.reset();
+        });
+    </script>
+</body>
+</html>
